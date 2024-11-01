@@ -40,12 +40,13 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <img
-              src="/placeholder.svg?height=400&width=400"
+              src="/me.jpg"
               alt="John Doe"
               className="rounded-lg shadow-lg"
             />
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-green-300 to-green-600 mix-blend-overlay rounded-lg"
+              className="absolute inset-0 bg-gradient-to-r  mix-blend-overlay rounded-lg"
+              //ALERT: add gradient later
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.6 }}
               transition={{ duration: 0.8 }}
