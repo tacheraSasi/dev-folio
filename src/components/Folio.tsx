@@ -6,6 +6,7 @@ import Footer from './Footer'
 import { ChevronDown } from 'lucide-react'
 import StarryBackground from './StarryBackground'
 import Projects from './Projects'
+import Skills from './Skills'
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) {
@@ -202,21 +203,11 @@ export default function Home() {
         />
         <Header />
         <main>
-          <ErrorBoundary>
             <Hero />
-          </ErrorBoundary>
-          <ErrorBoundary>
             <About />
-          </ErrorBoundary>
-          <ErrorBoundary>
             <Skills />
-          </ErrorBoundary>
-          <ErrorBoundary>
             <Projects />
-          </ErrorBoundary>
-          <ErrorBoundary>
             <Contact />
-          </ErrorBoundary>
         </main>
         <Footer />
       </div>
