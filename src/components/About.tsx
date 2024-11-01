@@ -28,9 +28,10 @@ export default function About() {
             <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-600">About Me</h2>
             <p className="text-lg mb-4 text-neutral-300">
               I'm a passionate web developer with a keen eye for design and a love for creating seamless user experiences. With expertise in modern web technologies, I bring ideas to life through clean, efficient code and stunning visuals.
+              CEO @ <a href="https://ekilie.com?refferer=ceo-portifolio" target="_blank" className="text-green-300 cursor-pointer hover:underline">ekilie</a>
             </p>
             <p className="text-lg text-neutral-300">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while brainstorming my next big idea.
+              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of tea while brainstorming my next big idea.
             </p>
           </div>
           <motion.div

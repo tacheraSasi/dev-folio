@@ -6,13 +6,13 @@ export default function Skills() {
     {
       title: "Programming languages",
       skills: [
-        { name: "Python", icon: "https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" },
-        { name: "JavaScript", icon: "https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" },
-        { name: "TypeScript", icon: "https://img.shields.io/badge/-TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" },
-        { name: "PHP", icon: "https://img.shields.io/badge/-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" },
         { name: "Go", icon: "https://img.shields.io/badge/-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" },
+        { name: "PHP", icon: "https://img.shields.io/badge/-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" },
+        { name: "Python", icon: "https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" },
+        { name: "TypeScript", icon: "https://img.shields.io/badge/-TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" },
         { name: "Java", icon: "https://img.shields.io/badge/-Java-007396?style=for-the-badge&logo=java&logoColor=white" },
         { name: "C++", icon: "https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" },
+        { name: "JavaScript", icon: "https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" },
       ],
     },
     {
@@ -30,10 +30,10 @@ export default function Skills() {
     {
       title: "Backend Frameworks",
       skills: [
+        { name: "Gin", icon: "https://img.shields.io/badge/-Gin-007396?style=for-the-badge&logo=gin&logoColor=white" },
+        { name: "Fiber", icon: "https://img.shields.io/badge/-Fiber-00C7B7?style=for-the-badge&logo=gofiber&logoColor=white" },
         { name: "Express.js", icon: "https://img.shields.io/badge/-Express.js-000000?style=for-the-badge&logo=express&logoColor=white" },
         { name: "Hono", icon: "https://img.shields.io/badge/-Hono-FF5722?style=for-the-badge&logo=hono&logoColor=white" },
-        { name: "Fiber", icon: "https://img.shields.io/badge/-Fiber-00C7B7?style=for-the-badge&logo=gofiber&logoColor=white" },
-        { name: "Gin", icon: "https://img.shields.io/badge/-Gin-007396?style=for-the-badge&logo=gin&logoColor=white" },
       ],
     },
   ];
