@@ -20,7 +20,7 @@ export default function Hero() {
       <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
         <div className="text-center z-10">
           <motion.h1
-            className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-600"
+            className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-neutral-300 to-neutral-600"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
