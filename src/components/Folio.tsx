@@ -194,7 +194,7 @@ export default function Home() {
   })
 
   return (
-    <ErrorBoundary>
+    <>
       <div className="bg-neutral-900 text-white min-h-screen">
         <StarryBackground />
         <motion.div
@@ -211,6 +211,6 @@ export default function Home() {
         </main>
         <Footer />
       </div>
-    </ErrorBoundary>
+    </>
   )
 }
