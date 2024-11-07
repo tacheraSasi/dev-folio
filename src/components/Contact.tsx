@@ -1,16 +1,16 @@
 import { useRef, useState, FormEvent } from "react";
 import { motion, useInView } from "framer-motion";
-import EkiliRelay from 'ekilirelay';
+import EkiliRelay from "ekilirelay";
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [status, setStatus] = useState<string>("");
-  console.log(import.meta.env.REACT_APP_RELAY_API_KEY)
+  console.log(import.meta.env.REACT_APP_RELAY_API_KEY);
 
   const mailer = new EkiliRelay(import.meta.env.VITE_APP_RELAY_API_KEY || "");
 
@@ -18,20 +18,28 @@ export default function Contact() {
     e.preventDefault();
     try {
       const response = await mailer.sendEmail(
-        'receiver-email@example.com',
+        "support@ekilie.com",
         `Message from ${name}`,
         `Message: ${message}\nFrom: ${name} <${email}>`,
         `From: ${name} <${email}>`
       );
 
-      setStatus(response.status === 'success' ? "Email sent successfully!" : `Failed to send email: ${response.message}`);
+      setStatus(
+        response.status === "success"
+          ? "Email sent successfully!"
+          : `Failed to send email: ${response.message}`
+      );
     } catch (error) {
       setStatus("Error: " + (error as Error).message);
     }
   };
 
   return (
-    <section ref={ref} id="contact" className="min-h-screen flex items-center justify-center py-20">
+    <section
+      ref={ref}
+      id="contact"
+      className="min-h-screen flex items-center justify-center py-20"
+    >
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-600"
@@ -49,7 +57,10 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="mb-6">
-            <label htmlFor="name" className="block mb-2 text-sm font-medium text-neutral-300">
+            <label
+              htmlFor="name"
+              className="block mb-2 text-sm font-medium text-neutral-300"
+            >
               Name
             </label>
             <input
@@ -62,7 +73,10 @@ export default function Contact() {
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-neutral-300">
+            <label
+              htmlFor="email"
+              className="block mb-2 text-sm font-medium text-neutral-300"
+            >
               Email
             </label>
             <input
@@ -75,7 +89,10 @@ export default function Contact() {
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="message" className="block mb-2 text-sm font-medium text-neutral-300">
+            <label
+              htmlFor="message"
+              className="block mb-2 text-sm font-medium text-neutral-300"
+            >
               Message
             </label>
             <textarea
@@ -87,7 +104,10 @@ export default function Contact() {
               required
             ></textarea>
           </div>
-          <span className="text-green-500">Powered by <a href="https://relay.ekilie.com?ref=dev-folio">ekilirelay</a></span>
+          <span className="text-green-500">
+            Powered by{" "}
+            <a href="https://relay.ekilie.com?ref=dev-folio">ekilirelay</a>
+          </span>
           <motion.button
             type="submit"
             className="w-full bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 rounded-md font-semibold hover:from-green-500 hover:to-green-700 transition-all duration-300"
@@ -96,7 +116,11 @@ export default function Contact() {
           >
             Send Message
           </motion.button>
-          {status && <p className="mt-4 text-center text-sm text-neutral-300">{status}</p>}
+          {status && (
+            <p className="mt-4 text-center text-sm text-neutral-300">
+              {status}
+            </p>
+          )}
         </motion.form>
       </div>
     </section>
