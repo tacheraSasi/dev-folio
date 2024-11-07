@@ -10,8 +10,9 @@ export default function Contact() {
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [status, setStatus] = useState<string>("");
+  console.log(import.meta.env.REACT_APP_RELAY_API_KEY)
 
-  const mailer = new EkiliRelay(process.env.REACT_APP_RELAY_API_KEY || "");
+  const mailer = new EkiliRelay(import.meta.env.REACT_APP_RELAY_API_KEY || "");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -86,6 +87,7 @@ export default function Contact() {
               required
             ></textarea>
           </div>
+          <span className="text-green-500">Powered by <a href="https://relay.ekilie.com?ref=dev-folio">ekilirelay</a></span>
           <motion.button
             type="submit"
             className="w-full bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 rounded-md font-semibold hover:from-green-500 hover:to-green-700 transition-all duration-300"
