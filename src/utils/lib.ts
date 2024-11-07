@@ -40,3 +40,41 @@ export const devEnvironment = [
   { name: "Databases", value: "PostgreSQL, MySQL, SQLite" },
   { name: "Other Tools", value: "Git, Prisma, HTMX" },
 ];
+
+export const projects = [
+  {
+    title: "ekiliRelay",
+    description: "A free email sending API service for developers",
+    image: "/ekilirelay.png",
+    tech: ["PHP", "TypeScript", "Golang"],
+    url: "https://relay.ekilie.com", 
+  },
+  {
+    title: "ekiliSense",
+    description: "AI-powered education management system",
+    image: "/ekilisense.png",
+    tech: ["PHP", "JS", "NodeJS"],
+    url: "https://sense.ekilie.com", 
+  },
+  {
+    title: "TUWK",
+    description: "A rape crisis and sexual assault center",
+    image: "/tuwk.png",
+    tech: ["PHP", "HTML", "CSS", "JS"],
+    url: "https://tuwk.tachera.com", 
+  },
+  {
+    title: "Magreth",
+    description: "AI therapist and friendly companion",
+    image: "/magreth.png",
+    tech: ["NextJS", "Postgres", "Drizzlekit", "TypeScript"],
+    url: "https://magreth.ekilie.com", 
+  },
+  {
+    title: "Insights",
+    description: "The tech developer blog",
+    image: "/insights.png",
+    tech: ["Laravel", "MySQL", "PHP", "TailwindCSS"],
+    url: "https://insights.ekilie.com", 
+  },
+];
