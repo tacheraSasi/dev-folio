@@ -12,11 +12,11 @@ export default function Footer() {
               <span className="sr-only">Twitter</span>
               <Twitter className="h-6 w-6" />
             </a> */}
-            <a href="https://github.com/tacheraSasi" className="text-neutral-400 hover:text-green-400 transition-colors duration-300">
+            <a href="https://github.com/tacheraSasi" target='blank' className="text-neutral-400 hover:text-green-400 transition-colors duration-300">
               <span className="sr-only">GitHub</span>
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://www.linkedin.com/in/tachera-w-sasi-506307286" className="text-neutral-400 hover:text-green-400 transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/tachera-w-sasi-506307286" target='blank' className="text-neutral-400 hover:text-green-400 transition-colors duration-300">
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="h-6 w-6" />
             </a>
