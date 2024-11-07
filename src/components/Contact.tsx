@@ -12,7 +12,7 @@ export default function Contact() {
   const [status, setStatus] = useState<string>("");
   console.log(import.meta.env.REACT_APP_RELAY_API_KEY)
 
-  const mailer = new EkiliRelay(import.meta.env.REACT_APP_RELAY_API_KEY || "");
+  const mailer = new EkiliRelay(import.meta.env.VITE_APP_RELAY_API_KEY || "");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
