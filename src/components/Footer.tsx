@@ -1,4 +1,4 @@
-import { ChevronDown, Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import {  Github, Linkedin, Mail } from 'lucide-react'
 
 export default function Footer() {
     return (
