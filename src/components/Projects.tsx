@@ -44,7 +44,7 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} id="projects" className="min-h-screen py-20">
+    <section ref={ref} id="projects" className="min-h-screen py-20 bg-neutral-900">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-600"
@@ -54,24 +54,23 @@ export default function Projects() {
         >
           My Projects
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              className="relative overflow-hidden rounded-lg shadow-lg bg-neutral-800 group"
+              className="relative overflow-hidden rounded-lg shadow-xl bg-neutral-800 group transform transition-all duration-300 ease-in-out hover:scale-105"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-64 object-cover"
+                className="w-full h-64 object-cover rounded-t-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-900 group-hover:from-neutral-900 group-hover:via-neutral-900 group-hover:to-neutral-900 transition-all duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-900 opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
               <div className="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 group-hover:justify-center">
-                <h3 className="text-2xl font-bold mb-2 text-white">
+                <h3 className="text-2xl font-semibold mb-2 text-white">
                   {project.title}
                 </h3>
                 <p className="text-neutral-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -81,7 +80,7 @@ export default function Projects() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-green-600 text-white px-2 py-1 rounded text-sm"
+                      className="bg-green-600 text-white px-3 py-1 rounded-md text-sm font-medium"
                     >
                       {tech}
                     </span>
@@ -91,9 +90,9 @@ export default function Projects() {
                   href={project.url} // Use href to link to the project URL
                   target="_blank" // Opens the link in a new tab
                   rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-2 rounded-full text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 rounded-full text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform hover:scale-110"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   View Project
                 </motion.a>
