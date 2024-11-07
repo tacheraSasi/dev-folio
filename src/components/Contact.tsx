@@ -25,6 +25,12 @@ export default function Contact() {
         `Message: ${message}\nFrom: ${name} <${email}>`,
         `From: ${name} <${email}>`
       );
+      if (response.status == "success"){
+        setName("")
+        setEmail("")
+        setMessage("")
+      }
+      
       setStatus(
         response.status === "success"
           ? "Email sent successfully!"
