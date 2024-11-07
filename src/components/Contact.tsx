@@ -10,12 +10,14 @@ export default function Contact() {
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [status, setStatus] = useState<string>("");
-  console.log(import.meta.env.REACT_APP_RELAY_API_KEY);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const mailer = new EkiliRelay(import.meta.env.VITE_APP_RELAY_API_KEY || "");
+  const mailer = new EkiliRelay(import.meta.env.VITE_RELAY_API_KEY || "");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus("");
     try {
       const response = await mailer.sendEmail(
         "support@ekilie.com",
@@ -23,7 +25,6 @@ export default function Contact() {
         `Message: ${message}\nFrom: ${name} <${email}>`,
         `From: ${name} <${email}>`
       );
-
       setStatus(
         response.status === "success"
           ? "Email sent successfully!"
@@ -31,6 +32,8 @@ export default function Contact() {
       );
     } catch (error) {
       setStatus("Error: " + (error as Error).message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -104,17 +107,45 @@ export default function Contact() {
               required
             ></textarea>
           </div>
-          <span className="text-green-500">
+          <span className="text-neutral-300 text-sm mt-4 block text-center">
             Powered by{" "}
-            <a href="https://relay.ekilie.com?ref=dev-folio">ekilirelay</a>
+            <a
+              href="https://relay.ekilie.com?ref=dev-folio"
+              className="underline hover:text-green-600 text-green-500"
+            >
+              EkiliRelay
+            </a>
           </span>
           <motion.button
             type="submit"
-            className="w-full bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 rounded-md font-semibold hover:from-green-500 hover:to-green-700 transition-all duration-300"
+            className="w-full bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 rounded-md font-semibold hover:from-green-500 hover:to-green-700 transition-all duration-300 flex items-center justify-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            disabled={loading}
           >
-            Send Message
+            {loading ? (
+              <svg
+                className="animate-spin h-5 w-5 mr-3 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                ></path>
+              </svg>
+            ) : null}
+            {loading ? "Sending..." : "Send Message"}
           </motion.button>
           {status && (
             <p className="mt-4 text-center text-sm text-neutral-300">
