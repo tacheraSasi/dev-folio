@@ -100,7 +100,7 @@ export const projects = [
     title: "VintLang",
     description:
       "A lightweight, expressive programming language designed to simplify modern development. ",
-    image: "/vintlang.png",
+    image: "/vintlang-dark.png",
     tech: ["Golang"],
     url: "https://relay.ekilie.com",
   },
