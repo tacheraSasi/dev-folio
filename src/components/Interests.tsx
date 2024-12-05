@@ -1,8 +1,5 @@
-
 const Interests = () => {
-  return (
-    <div>Interests</div>
-  )
-}
+  return <div>Interests</div>;
+};
 
-export default Interests
+export default Interests;

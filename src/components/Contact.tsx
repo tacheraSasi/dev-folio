@@ -25,12 +25,12 @@ export default function Contact() {
         `Message: ${message}\nFrom: ${name} <${email}>`,
         `From: ${name} <${email}>`
       );
-      if (response.status == "success"){
-        setName("")
-        setEmail("")
-        setMessage("")
+      if (response.status == "success") {
+        setName("");
+        setEmail("");
+        setMessage("");
       }
-      
+
       setStatus(
         response.status === "success"
           ? "Email sent successfully!"
@@ -76,6 +76,7 @@ export default function Contact() {
               type="text"
               id="name"
               value={name}
+              placeholder="Enter you name here"
               onChange={(e) => setName(e.target.value)}
               className="w-full px-3 py-2 text-neutral-300 bg-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-300"
               required

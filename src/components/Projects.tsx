@@ -3,13 +3,15 @@ import { useRef } from "react";
 import { projects } from "../utils/lib";
 
 export default function Projects() {
-
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} id="projects" className="min-h-screen py-20 bg-neutral-900">
+    <section
+      ref={ref}
+      id="projects"
+      className="min-h-screen py-20 bg-neutral-900"
+    >
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-600"

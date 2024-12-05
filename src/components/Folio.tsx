@@ -1,23 +1,20 @@
-import { motion, useScroll, useSpring,  } from 'framer-motion'
-import Header from './Header'
-import Contact from './Contact'
-import Footer from './Footer'
-import StarryBackground from './StarryBackground'
-import Projects from './Projects'
-import Skills from './Skills'
-import About from './About'
-import Hero from './Hero'
-
-
-
+import { motion, useScroll, useSpring } from "framer-motion";
+import Header from "./Header";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import StarryBackground from "./StarryBackground";
+import Projects from "./Projects";
+import Skills from "./Skills";
+import About from "./About";
+import Hero from "./Hero";
 
 export default function Home() {
-  const { scrollYProgress } = useScroll()
+  const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
-  })
+    restDelta: 0.001,
+  });
 
   return (
     <>
@@ -29,14 +26,14 @@ export default function Home() {
         />
         <Header />
         <main>
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
         </main>
         <Footer />
       </div>
     </>
-  )
+  );
 }
