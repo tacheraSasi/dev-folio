@@ -99,10 +99,10 @@ export const projects = [
   {
     title: "VintLang",
     description:
-      "A lightweight, expressive programming language designed to simplify modern development. ",
+      "A powerful programming language . ",
     image: "/vintlang-dark.png",
     tech: ["Golang"],
-    url: "https://relay.ekilie.com",
+    url: "https://vintlang.ekilie.com",
   },
   {
     title: "ekiliRelay",
