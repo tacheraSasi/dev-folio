@@ -80,7 +80,9 @@ export default function Hero() {
           repeatType: "reverse",
         }}
       >
-        <ChevronDown className="w-8 h-8 text-green-400" />
+        <a href="#about" className="text-neutral-300 cursor-pointer">
+          <ChevronDown className="w-8 h-8 text-green-400" />
+        </a>
       </motion.div>
     </section>
   );
