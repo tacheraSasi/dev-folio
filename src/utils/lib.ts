@@ -41,7 +41,7 @@ export const skillCategories = [
       },
       {
         name: "Laravel",
-        icon: "https://img.shields.io/badge/-Laravel-092E20?style=for-the-badge&logo=laravel&logoColor=white",
+        icon: "https://img.shields.io/badge/-Laravel-092B45?style=for-the-badge&logo=laravel&logoColor=white",
       },
       {
         name: "React",
@@ -94,9 +94,10 @@ export const skillCategories = [
 
 export const devEnvironment = [
   { name: "OS", value: "Ubuntu 20.04 LTS, GNOME" },
-  { name: "Editor", value: "VSCode, NeoVim" },
+  { name: "Editor", value: "ZED, NeoVim" },
   { name: "Databases", value: "PostgreSQL, MySQL, SQLite" },
   { name: "Other Tools", value: "Git, Prisma, HTMX" },
+  { name: "Local assistant", value: "ellie, magreth" },
 ];
 
 export const projects = [
