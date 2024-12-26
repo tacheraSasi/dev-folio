@@ -40,6 +40,10 @@ export const skillCategories = [
         icon: "https://img.shields.io/badge/-Django-092E20?style=for-the-badge&logo=django&logoColor=white",
       },
       {
+        name: "Laravel",
+        icon: "https://img.shields.io/badge/-Laravel-092E20?style=for-the-badge&logo=laravel&logoColor=white",
+      },
+      {
         name: "React",
         icon: "https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black",
       },
